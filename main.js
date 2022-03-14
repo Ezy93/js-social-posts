@@ -185,6 +185,7 @@ let likeButton = document.getElementsByClassName("like-button  js-like-button");
 console.log(likeButton)
 const idLikedPost = [];
 console.table(idLikedPost);
+let isliked = true;
 
 
 
@@ -262,13 +263,37 @@ posts.forEach((element , i) => {
 
     setTimeout(() => {
         likeButton.item(i).addEventListener("click", function(){
-            likeButton.item(i).classList.add("like-button--liked");
-            const likeCounter = document.getElementById(`like-counter-${element.id}`)
-            likeCounter.innerHTML = element.likes + 1;
-            idLikedPost.push(element.id)
-            console.clear()
-            console.table(idLikedPost);
+            
+            if(isliked){
+
+                likeButton.item(i).classList.add("like-button--liked");
+                const likeCounter = document.getElementById(`like-counter-${element.id}`)
+                likeCounter.innerHTML = element.likes + 1;
+    
+                if(!idLikedPost.includes(element.id)){
+                    idLikedPost.push(element.id)
+                }
+    
+                console.clear()
+                console.table(idLikedPost);
+
+            }else{
+
+                likeButton.item(i).classList.remove("like-button--liked");
+                const likeCounter = document.getElementById(`like-counter-${element.id}`)
+                likeCounter.innerHTML = element.likes;
+    
+                if(!idLikedPost.includes(element.id)){
+                    idLikedPost.push(element.id)
+                }
+    
+                console.clear()
+                console.table(idLikedPost);
+            }
+            isliked = !isliked
         })
+
+        
         
     },250)
     
