@@ -221,26 +221,21 @@ posts.forEach((element , i) => {
             </div>
     `
     
-    console.log(likeButton.item(i));
 
     setTimeout(() => {
         likeButton.item(i).addEventListener("click", function(){
             likeButton.item(i).classList.add("like-button--liked");
             const likeCounter = document.getElementById(`like-counter-${element.id}`)
-            console.log(likeCounter)
             likeCounter.innerHTML = element.likes + 1;
+            idLikedPost.push(element.id)
+            console.clear()
+            console.table(idLikedPost);
         })
-
+        
     },250)
     
     
     
 });
 
-/* for(let i = 0; i < posts.length; i++){
-} */
 
-
-/* likeButton.addEventListener("click", function(){
-    likeButton.classList.add("like-button--liked")
-}) */
