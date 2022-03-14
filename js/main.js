@@ -53,5 +53,129 @@ const posts = [
         },
         "likes": 95,
         "created": "2021-03-05"
-    }
+    },
+    {
+        "id": 6,
+        "content": "Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.",
+        "media": "https://unsplash.it/600/400?image=24",
+        "author": {
+            "name": "Doriana Estebanera",
+            "image": null
+        },
+        "likes": 65,
+        "created": "2021-03-03"
+    },
+    {
+        "id": 7,
+        "content": "Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.",
+        "media": "https://unsplash.it/600/400?image=24",
+        "author": {
+            "name": "Luca Ciuffreda",
+            "image": "https://unsplash.it/300/300?image=29",
+        },
+        "likes": 69,
+        "created": "2021-04-01"
+    },
+    {
+        "id": 8,
+        "content": "Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.",
+        "media": "https://unsplash.it/600/400?image=24",
+        "author": {
+            "name": "Francesco Giordani",
+            "image": null
+        },
+        "likes": 70,
+        "created": "2021-01-03"
+    },
+    {
+        "id":9,
+        "content": "Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.",
+        "media": "https://unsplash.it/600/400?image=24",
+        "author": {
+            "name": "Giovanni paolo II",
+            "image": "https://unsplash.it/300/300?image=29",
+        },
+        "likes": 56,
+        "created": "2021-01-01"
+    },
+    {
+        "id": 10,
+        "content": "Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.",
+        "media": "https://unsplash.it/600/400?image=24",
+        "author": {
+            "name": "Roland crescimone",
+            "image": "https://unsplash.it/300/300?image=29",
+        },
+        "likes": 87,
+        "created": "2021-04-03"
+    },
+    {
+        "id": 11,
+        "content": "Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.",
+        "media": "https://unsplash.it/600/400?image=24",
+        "author": {
+            "name": "Luca Farinola",
+            "image": "https://unsplash.it/300/300?image=29",
+        },
+        "likes": 102,
+        "created": "2021-01-01"
+    },
+    {
+        "id": 12,
+        "content": "Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.",
+        "media": "https://unsplash.it/600/400?image=24",
+        "author": {
+            "name": "Bertuccia Cappuccino",
+            "image": "https://unsplash.it/300/300?image=29",
+        },
+        "likes": 150,
+        "created": "2020-04-03"
+    },
+    {
+        "id": 13,
+        "content": "Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.",
+        "media": "https://unsplash.it/600/400?image=24",
+        "author": {
+            "name": "Mariagrazia Troiano",
+            "image": "https://unsplash.it/300/300?image=29",
+        },
+        "likes": 89,
+        "created": "2021-12-03"
+    },
+    {
+        "id": 14,
+        "content": "Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.",
+        "media": "https://unsplash.it/600/400?image=24",
+        "author": {
+            "name": "Giovannino Di quarto",
+            "image": "https://unsplash.it/300/300?image=29"
+        },
+        "likes": 117,
+        "created": "2022-04-03"
+    },
+    {
+        "id": 15,
+        "content": "Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.",
+        "media": "https://unsplash.it/600/400?image=24",
+        "author": {
+            "name": "Esteban De la suerte",
+            "image": "https://unsplash.it/300/300?image=29",
+        },
+        "likes": 502,
+        "created": "2021-04-03"
+    },
 ];
+
+/* Descrizione */
+/* Ricreiamo un feed social aggiungendo al layout di base fornito, il nostro script JS in cui:
+
+Milestone 1 - Creiamo il nostro array di oggetti che rappresentano ciascun post. Ogni post dovrà avere le informazioni necessarie per stampare la relativa card:
+            id del post, numero progressivo da 1 a n nome autore, foto autore, data in formato americano (mm-gg-yyyy), testo del post, immagine (non tutti i post devono avere una immagine), numero di likes.
+            Non è necessario creare date casuali, per le immagini va bene utilizzare qualsiasi servizio di placeholder ad es. Unsplash (https://unsplash.it/300/300?image=<id>)
+
+
+Milestone 2 - Prendendo come riferimento il layout di esempio presente nell'html, stampiamo i post del nostro feed.
+
+
+Milestone 3 - Se clicchiamo sul tasto "Mi Piace" cambiamo il colore al testo del bottone e incrementiamo il counter dei likes relativo. 
+            Salviamo in un secondo array gli id dei post ai quali abbiamo messo il like. */
