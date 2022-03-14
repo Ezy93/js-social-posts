@@ -181,12 +181,12 @@ Milestone 3 - Se clicchiamo sul tasto "Mi Piace" cambiamo il colore al testo del
             Salviamo in un secondo array gli id dei post ai quali abbiamo messo il like. */
 
 const postContainer = document.getElementById("container");
-/* let likeButton = document.getElementsByClassName("like-button  js-like-button");
-console.log(likeButton) */
+let likeButton = document.getElementsByClassName("like-button  js-like-button");
+console.log(likeButton)
 const idLikedPsot = [];
 console.table(idLikedPsot);
 
-posts.forEach(element => {
+posts.forEach((element , i) => {
     postContainer.innerHTML += `
     <div class="post">
             <div class="post__header">
@@ -218,12 +218,21 @@ posts.forEach(element => {
                 </div> 
             </div>
     `
-    let likeButton = document.getElementsByClassName("like-button  js-like-button").item(element).nodeValue(element.id);
-    console.log(likeButton)
+    
+    console.log(likeButton.item(i));
+    setTimeout(() => {
+        likeButton.item(i).addEventListener("click", function(){
+            likeButton.item(i).classList.add("like-button--liked")
+        })
 
+    },250)
+    
+    
     
 });
 
+/* for(let i = 0; i < posts.length; i++){
+} */
 
 
 /* likeButton.addEventListener("click", function(){
